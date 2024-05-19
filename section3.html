@@ -1,0 +1,448 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Hewlett packard</title>
+    <link rel="stylesheet" href="section3.css">
+</head>
+
+<style>
+                  @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Goblin+One&family=Imperial+Script&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pacifico&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+                *{
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                body{
+                    font-family: "poppins";
+                    list-style-type: none;
+                }
+
+                :root{
+
+                --navlinks:15px;
+                --btn-color:#149484;
+                --sub-head:17px;
+                --h3:22px;
+                --b:14px;
+                --span:12px; 
+                }
+                button{
+                    background-color: #149484;
+                    justify-content: end;
+                    text-align: end;
+                    border: none;
+                    padding: 10px;
+                }
+                button a{
+                    text-decoration: none;
+                }
+
+
+                /* header */
+                .navbar{
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    background-color: black;
+                    padding: 10px ;
+                    width: 100%;
+                }
+
+                .logo {
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    color: white;
+                }
+                .logo .logo-box{
+                    width: 50px;
+                    height: 10px;
+                    border: 2px solid #149484;
+                }
+                .logo p{
+                    font-weight: light;
+                    font-size: var(--navlinks);
+                    text-align: start;
+                }
+                .nav-links{
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    width: 40%;
+
+                }
+                .nav-links li{
+                    list-style-type: none;
+
+                }
+                .nav-links li a{
+                    text-decoration: none;
+                    color: white;
+                    font-size: var(--navlinks);
+                }
+
+                .nav-icons a {
+                text-decoration: none;
+                color: white;
+                padding: 0 10px;
+
+                }
+                #check {
+                    display: none;
+                }
+                #menu-btn{
+                    font-size: 18px;
+                    padding: 5px 10px;
+                    display: flex;
+                    align-items: center;
+                    color:black;
+                    display: none;
+                    margin-top: 60px;
+                    margin-right: 10px;
+                    background-color:white;
+                }
+                @media only screen and (max-width:500px) and (min-width:200px){
+                    .nav-links{
+                        width: 100%;
+                        height: 200px;
+                        position: absolute;
+                        background-color: black;
+                        top: 120px;
+                        display: flex;
+                        flex-direction: column;
+                        display: none;
+                        z-index: 999;
+                    }
+                    .nav-links li{
+                    width: 100%;
+                    height: 330px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    }
+                    .nav-links li a{
+                        color: white;
+                        font-size: 12px;
+                        padding-top: 20px;
+                    }
+
+                    .nav-links{
+                        margin-top: -46px;
+                    }
+                    .nav-links .home  a{
+                        color: black;
+                    }
+
+                    .nav-links li a:hover{
+                        color:black;
+                        transition: 0.5s;
+                    }
+                    #menu-btn{
+                        display: block;
+                        margin-top: 0px;
+
+                    }
+                    #check:checked~.nav-links{
+                        display: flex;
+                    }
+                    .nav-links .home  a{
+                        color:black;
+                    }
+
+            }
+
+
+
+            /* section3 */
+            section h1{
+              text-align: center;
+              font-weight: 400;
+              margin: 30px 0;
+            }
+            section h2{
+              text-align: center;
+              font-weight: 400;
+              margin: 30px 0;
+              font-size: var(--sub-head);
+            }
+            section{
+              padding: 100px 80px;
+            }
+            section p{
+              text-align: center;
+              margin: 30px 0;
+            }
+            table, td, th {
+                border: 1px solid lightgray;
+                padding: 10px;
+              }
+              th{
+                border-bottom: 1px solid black;
+              }
+              
+              table {
+                border-collapse: collapse;
+                width: 100%;
+                text-align: center;
+                overflow-x:auto;
+
+              }
+              
+              th {
+                height: 15px;
+              }
+              .check-boxes{
+              display: flex;
+              justify-content: space-between;
+              width: 30%;
+              margin: 40px 0;
+              margin-left:auto ;
+              margin-right: auto;
+             }
+              .button-Container{
+            display: flex;
+            justify-content: space-around;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin: 40px 0;
+                
+            }
+            .button-Container button{
+            padding: 10px 20px;
+            color: white;
+            background-color: #149484;
+            border: none;
+            }
+            .button-Container button a{
+                text-decoration: none;
+                color: white;
+                border: none;
+            }
+
+           footer{
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 20px;
+
+        }
+        footer div{
+            margin-top: 10px;
+        }
+        footer p{
+            font-weight: 100;
+            font-size: var(--b);
+        }
+        footer div h4{
+            padding: 10px 0;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        footer i{
+            background-color: #149484;
+            color: white;
+            border-radius: 5px;
+            padding: 8px 10px;
+        }
+        @media only screen and (max-width:500px) and (min-width:200px){
+          section{
+            padding: 20px ;
+          }
+
+            footer{
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+</style>
+<body>
+    <!-- header start -->
+<header>
+    <nav class="navbar">
+        <input type="checkbox" name="" id="check">
+        <figure class="logo">
+            <div class="logo-box"></div>
+            <h4>Hewlett Packard</h4>
+            <p>Enterprise</p>
+       </figure>
+        <ul class="nav-links">
+                <li><a href="#">HPE GreenLake</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact</a></li>
+      </ul>
+   
+<ul class="nav-icons">
+
+    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+    <a href=""><i class="fa-solid fa-border-all"></i></a>
+</ul>
+<label for="check" id="menu-btn"><i class="fa-solid fa-bars"></i></label>
+    </nav>
+</header>
+
+<!-- header -->
+
+
+<!-- section start -->
+<section>
+    <h1>AZURE HCI Sizing Tool </h1> <h2>Added Workload Details are Added Below</h2>
+
+
+    <div style="overflow-x: auto;">
+
+    <table>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>VM Count</th>
+          <th>VCPU's</th>
+          <th>VP Desnity</th>
+          <th>Memory</th>
+          <th>Storage</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Myworkload</td>
+          <td>General</td>
+          <td>6</td>
+          <td>4vCPU's</td>
+          <td>6</td>
+          <td>6.705GB</td>
+          <td>10.5</td>
+          <td><i class="fa-solid fa-pen-to-square"></i></td>
+          <td><i class="fa-solid fa-trash-can"></i></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Testworkload</td>
+            <td>General</td>
+            <td>2</td>
+            <td>2vCPU's</td>
+            <td>2</td>
+            <td>2.705GB</td>
+            <td>8.5</td>
+            <td><i class="fa-solid fa-pen-to-square"></i></td>
+            <td><i class="fa-solid fa-trash-can"></i></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Test HCI</td>
+            <td>General</td>
+            <td>1</td>
+            <td>5vCPU</td>
+            <td>6</td>
+            <td>8.705GB</td>
+            <td>8.5</td>
+            <td><i class="fa-solid fa-pen-to-square"></i></td>
+            <td><i class="fa-solid fa-trash-can"></i></td>
+          </tr>
+
+     
+       
+      </table>
+    </div>
+
+    <div class="button-Container">
+      <button><a href="section2.html">Back</a></button>
+      <button><a href="section4.html">Next</a></button>
+</div>
+   
+</section>
+<!-- section4 -->
+
+
+
+<!-- footer start -->
+<footer>
+  <div class="foot">
+      <h4>Company</h4>
+      <p>About HPE</p>
+      <p>Accessibility</p>
+      <p>Careers</p>
+      <p>Contact Us</p>
+      <p>Corporate Responsibilty</p>
+      <p>Gloabal diversity and Indusion</p>
+      <p>HPE Modern Slavery Transparency Statement</p>
+      <p>(PDF)</p>
+      <p>Hawlett Packard Labs</p>
+      <p>Investor Relations</p>
+      <p>Leadership</p>
+      <p>Public Policy</p>
+  </div>
+  
+  
+  
+  <div>
+  
+      <h4>Learn about</h4>
+      <p>Artificial Intelligence</p>
+      <p>Cloud Computing</p>
+      <p>Containers</p>
+      <p>Machine Learning</p>
+      <p>Enterprise Glossary</p>
+      <h4>News and events</h4>
+      <p>News and Insights</p>
+      <p>Newsroom</p>
+      <p>HPE Discover</p>
+      <p>Events</p>
+      <p>Webinars</p>
+  </div>
+  
+  
+  <div>
+  <h4>support</h4>
+  <p>Product Support</p>
+  <p>Software & Drivers</p>
+  <p>Warranty Check</p>
+  <p>Enhanced Support Services</p>
+  <p>Education and Training</p>
+  <p>Product Return and Recycling</p>
+  <p>CEM Solutions</p>
+  <p>Validate Equipement Parts</p>
+  <h4>Communities</h4>
+  <p>HPE Community</p>
+  <p>Aruba Airheads</p>
+  </div>
+  
+  
+  <div>
+      <h4>customer resources</h4>
+      <p>Customer Stores</p>
+  <p>How to Buy</p>
+  <p>Financial Services</p>
+  <p>HPE Customer Centers</p>
+  <p>Email Signup</p>
+  <p>HPE MyAccount</p>
+  <p>Resource Library</p>
+  <p>Video Gallery</p>
+  <p>Voice of the Customer Signup</p>
+  </div>
+  
+  <div>
+      <h4>Follow here</h4>
+  
+      <i class="fa-brands fa-linkedin"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-facebook-f"></i>
+      <i class="fa-brands fa-youtube"></i>
+      <i class="fa-solid fa-rss"></i>
+  </div>
+  
+  </footer>
+  
+  <!-- footer end -->
+</body>
+</html>

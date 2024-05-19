@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- font awesome cdn -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Hewlett packard</title>
+</head>
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Goblin+One&family=Imperial+Script&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pacifico&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "poppins";
+    list-style-type: none;
+}
+span{
+    color: red;
+}
+
+:root{
+
+--navlinks:15px;
+--btn-color:#149484;
+--sub-head:17px;
+--h3:22px;
+--b:14px;
+--span:12px; 
+}
+button{
+    background-color: #149484;
+    justify-content: end;
+    text-align: end;
+    border: none;
+    padding: 10px;
+}
+button a{
+    text-decoration: none;
+}
+
+
+/* header */
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    padding: 10px ;
+    width: 100%;
+}
+
+.logo {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.logo .logo-box{
+    width: 50px;
+    height: 10px;
+    border: 2px solid #149484;
+}
+.logo p{
+    font-weight: light;
+    font-size: var(--navlinks);
+    text-align: start;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+
+}
+.nav-links li{
+    list-style-type: none;
+
+}
+.nav-links li a{
+    text-decoration: none;
+    color: white;
+    font-size: var(--navlinks);
+}
+
+.nav-icons a {
+text-decoration: none;
+color: white;
+padding: 0 10px;
+
+}
+#check {
+    display: none;
+}
+#menu-btn{
+    font-size: 18px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    color:black;
+    display: none;
+    margin-top: 60px;
+    margin-right: 10px;
+    background-color:white;
+}
+@media only screen and (max-width:500px) and (min-width:200px){
+    .nav-links{
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        background-color: black;
+        top: 120px;
+        display: flex;
+        flex-direction: column;
+        display: none;
+        z-index: 999;
+    }
+    .nav-links li{
+    width: 100%;
+    height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .nav-links li a{
+        color: white;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+
+    .nav-links{
+        margin-top: -46px;
+    }
+    .nav-links .home  a{
+        color: black;
+    }
+
+    .nav-links li a:hover{
+        color:black;
+        transition: 0.5s;
+    }
+    #menu-btn{
+        display: block;
+        margin-top: 0px;
+
+    }
+    #check:checked~.nav-links{
+        display: flex;
+    }
+    .nav-links .home  a{
+        color:black;
+    }
+
+}
+/* section */
+section{
+ max-width: 80%;
+ margin-left: auto;
+ margin-right: auto;
+}
+section h1{
+    font-weight: 500;
+    padding: 30px 0;
+    text-align: center;
+}
+section h2{
+    font-size: var(--sub-head);
+    font-weight: 400;
+    text-align: center;
+}
+section p{
+    padding: 20px 0;
+    text-align: center;
+}
+
+              .button-Container{
+            display: flex;
+            justify-content: space-around;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin: 40px 0;
+                
+            }
+            .button-Container button{
+            padding: 10px 20px;
+            color: white;
+            background-color: #149484;
+            border: none;
+            }
+            .button-Container button a{
+                text-decoration: none;
+                color: white;
+                border: none;
+            }
+
+           footer{
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 20px;
+
+        }
+        footer div{
+            margin-top: 10px;
+        }
+        footer p{
+            font-weight: 100;
+            font-size: var(--b);
+        }
+        footer div h4{
+            padding: 10px 0;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        footer i{
+            background-color: #149484;
+            color: white;
+            border-radius: 5px;
+            padding: 8px 10px;
+        }
+        @media only screen and (max-width:500px) and (min-width:200px){
+
+            footer{
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+        .form-section1{
+            margin: 40px 0;
+        }
+.form-section1 div{
+display: grid;
+grid-template-columns: 2fr 2fr;
+}
+.form-section1 div input{
+    margin: 5px;
+    padding: 10px;
+}
+.form-section2{
+            margin:40px 0;
+        }
+.form-section2 div{
+display: grid;
+grid-template-columns: 2fr 2fr;
+}
+.form-section2 div input{
+    margin: 5px;
+    padding: 10px;
+}
+.form-section3{
+            margin:40px 0;
+            margin-top: -25px;
+        }
+.form-section3 div{
+display: grid;
+grid-template-columns: 2fr 1fr 1fr;
+}
+.form-section3 div input{
+    margin: 5px;
+    padding: 10px;
+}
+.form-bottom{
+    display: flex;
+}
+.form-bottom h4{
+    font-style: italic;
+    font-weight: 600;
+}
+.form-bottom span{
+    color: black;
+    font-weight: 400;
+    font-style: normal;
+}
+.form-bottoms{
+    padding-bottom: 60px;
+}
+.h4{
+    font-weight: 500;
+}
+
+input[type=text]:focus{
+    background-color: #149484;
+
+}
+
+@media only screen and (max-width:500px) and (min-width:200px){
+section{
+   max-width: 100%;
+   margin-left: 0;
+   margin-right: 0;
+   padding: 20px;
+}
+    .form-section1 div{
+        grid-template-columns: 2fr;
+        justify-content: center;
+        text-align: center;
+
+    }
+    
+    .form-section2 div{
+        grid-template-columns: 2fr;
+        justify-content: center;
+        text-align: center;
+
+    }
+    h3{
+        text-align: center;
+    }
+    
+    .form-section3 div{
+        grid-template-columns: 2fr;
+        justify-content: center;
+        text-align: center;
+    }
+    .form-bottom{
+        flex-direction: column;
+
+}
+
+}
+    
+</style>
+<body>
+
+ <!-- header start -->
+ <header>
+    <nav class="navbar">
+        <input type="checkbox" name="" id="check">
+        <figure class="logo">
+            <div class="logo-box"></div>
+            <h4>Hewlett Packard</h4>
+            <p>Enterprise</p>
+       </figure>
+        <ul class="nav-links">
+                <li><a href="#">HPE GreenLake</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact</a></li>
+      </ul>
+   
+<ul class="nav-icons">
+
+    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+    <a href=""><i class="fa-solid fa-border-all"></i></a>
+</ul>
+<label for="check" id="menu-btn"><i class="fa-solid fa-bars"></i></label>
+    </nav>
+</header>
+
+<!-- header -->
+
+
+
+    <section>
+        <h1>AZURE HCI Sizing Tool</h1>
+        <h2>Workload</h2>
+        <p>Enter the below details to create a workload. You can add multiple workloads also</p>
+
+ 
+<h3>Workload Details</h3>
+
+<div class="form-section1">
+<div>
+    
+ <h4 for="" class="h4">Workload Category <span>*</span></h4> <input type="text">
+</div>
+<div>
+    <h4 for="" class="h4">Workload Name <span>*</span></h4><input type="text"> 
+</div>
+<div>
+    <h4 for="" class="h4">Total Count of VM's <span>*</span></h4> <input type="text"> 
+</div>
+</div>
+<hr>
+
+<h3>VM Details</h3>
+<div class="form-section2">
+  
+    <div>
+        <h4 for="" class="h4">vCPU <span>*</span></h4><input type="text"> 
+    </div>
+    <div>
+        <h4 for="" class="h4">VM Ratio <span>*</span></h4> <input type="text"> 
+    </div>
+</div>
+<div class="form-section3">
+    <div>
+        <h4 for="" class="h4">vCPU <span>*</span></h4><input type="text">  <input type="text" placeholder="GB">
+    </div>
+    <div>
+        <h4 for="" class="h4">VM Ratio <span>*</span></h4> <input type="text">  <input type="text" placeholder="GB">
+    </div>
+
+
+
+</div>
+<h3 style="color: red;">Note:</h3>
+<div class="form-bottoms">
+<div class="form-bottom">
+  <h4>Workload category-</h4> <span>The type of worklod you want to size</span>
+</div>
+<div class="form-bottom">
+    <h4>Workload Name-</h4> <span>You can name your workload whatever you want</span>
+</div>
+<div class="form-bottom">
+    <h4>vCPU-</h4> <span>Number of Virtual CPU's per VDI</span>
+  </div>
+
+    <div class="form-bottom">
+        <h4>VM Ratio-</h4> <span>The number of virtual CPU'S per package(Physical core)</span>
+     </div>
+     
+    <div class="form-bottom">
+        <h4>Storage-</h4> <span>This should account for store in addition to what is going above. Doesn't include OS Or template VHD's </span>
+     </div>
+
+</div>
+<div class="button-Container">
+    <button><a href="index.html">Back</a></button>
+    <button><a href="section3.html">Next</a></button>
+</div>
+    </section>
+    <!-- main end -->
+
+
+    <!-- footer start -->
+<footer>
+    <div class="foot">
+        <h4>Company</h4>
+        <p>About HPE</p>
+        <p>Accessibility</p>
+        <p>Careers</p>
+        <p>Contact Us</p>
+        <p>Corporate Responsibilty</p>
+        <p>Gloabal diversity and Indusion</p>
+        <p>HPE Modern Slavery Transparency Statement</p>
+        <p>(PDF)</p>
+        <p>Hawlett Packard Labs</p>
+        <p>Investor Relations</p>
+        <p>Leadership</p>
+        <p>Public Policy</p>
+    </div>
+    
+    
+    
+    <div>
+    
+        <h4>Learn about</h4>
+        <p>Artificial Intelligence</p>
+        <p>Cloud Computing</p>
+        <p>Containers</p>
+        <p>Machine Learning</p>
+        <p>Enterprise Glossary</p>
+        <h4>News and events</h4>
+        <p>News and Insights</p>
+        <p>Newsroom</p>
+        <p>HPE Discover</p>
+        <p>Events</p>
+        <p>Webinars</p>
+    </div>
+    
+    
+    <div>
+    <h4>support</h4>
+    <p>Product Support</p>
+    <p>Software & Drivers</p>
+    <p>Warranty Check</p>
+    <p>Enhanced Support Services</p>
+    <p>Education and Training</p>
+    <p>Product Return and Recycling</p>
+    <p>CEM Solutions</p>
+    <p>Validate Equipement Parts</p>
+    <h4>Communities</h4>
+    <p>HPE Community</p>
+    <p>Aruba Airheads</p>
+    </div>
+    
+    
+    <div>
+        <h4>customer resources</h4>
+        <p>Customer Stores</p>
+    <p>How to Buy</p>
+    <p>Financial Services</p>
+    <p>HPE Customer Centers</p>
+    <p>Email Signup</p>
+    <p>HPE MyAccount</p>
+    <p>Resource Library</p>
+    <p>Video Gallery</p>
+    <p>Voice of the Customer Signup</p>
+    </div>
+    
+    <div>
+        <h4>Follow here</h4>
+    
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-solid fa-rss"></i>
+    </div>
+    
+    </footer>
+    
+    <!-- footer end -->
+    
+</body>
+</html>
